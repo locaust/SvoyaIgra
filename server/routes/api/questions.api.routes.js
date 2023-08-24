@@ -8,8 +8,6 @@ router
       const questions = await Question.findAll();
     
       res.json(questions);
-
-
       
     } catch ({ message }) {
       res.json({ message });

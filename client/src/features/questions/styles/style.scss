@@ -1,0 +1,54 @@
+.cards {
+  &__container {
+    display: flex;
+    width: 1100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+
+  }
+  &__card {
+    display: flex;
+    width: 100px;
+    height: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border: 1px solid black;
+    &:hover{
+      cursor: pointer;
+    }
+
+  }
+  &__modal{
+    display: block;
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    z-index: 2;
+    background-color: white;
+    border: 1px solid black ;
+    border-radius: 10px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 15px;
+    &__cross{
+      top: 10px;
+      right: 10px;
+      position: absolute;
+      &:hover{
+        cursor: pointer;
+      }
+
+    }
+  }
+  
+
+  }
+ 
+
+
+
