@@ -1,12 +1,12 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Question } from './types/types';
 
-export default function QuestionItem({ question }: { question: Question }):JSX.Element {
+export default function QuestionItem({ question, onClick }: { question: Question, onClick:React.Dispatch<React.SetStateAction<number>> }):JSX.Element {
   return (
-    <div >
-       <img src={question.img} alt="question" />
-    <h5>{question.question}</h5>
-  
-  </div>
+    <div className="cards__card" onClick={() => onClick(question.id)}>
+      100
+       {/* <img src={question.img} alt="question" />
+    <h5>{question.question}</h5> */}
+    </div>
   );
 }
