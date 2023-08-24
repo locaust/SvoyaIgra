@@ -5,67 +5,35 @@ module.exports = {
   async up(queryInterface, Sequelize) {
     await Question.bulkCreate([
       {
-        question: 'У какой породы собак язык не розового цвета?',
-        answer: 'Чау чау',
+        question: 'Какой преподаватель на фото?',
+        answer: 'Артем',
         theme_id: 1,
+        img:"/foto/Anna.png"
       },
       {
-        question: 'Какого цвета кровь у лобстера?',
-        answer: 'Голубого',
+        question: 'Какой преподаватель на фото?',
+        answer: 'Толя',
         theme_id: 1,
+        img:"/foto/Tolia.png"
       },
       {
-        question: 'Какую птицу французы называют «Летучая крыса»?',
-        answer: 'Голубь',
+        question: 'Какой преподаватель на фото?',
+        answer: 'Аня',
         theme_id: 1,
+        img:"/foto/Anna.png"
       },
       {
         question:
-          'Какое животное может обходиться без воды дольше, чем верблюд?',
-        answer: 'Крыса',
+          'Какой преподаватель на фото?',
+        answer: 'Лиза',
         theme_id: 1,
+        img:"/foto/Liza.png"
       },
       {
-        question: 'Как называются семейные группы у львов?',
-        answer: 'Прайд',
+        question: 'Какой преподаватель на фото?',
+        answer: 'Юра',
         theme_id: 1,
-      },
-      {
-        question: 'По какому признаку у щенка определяют его будущие размеры?',
-        answer: 'Лапы',
-        theme_id: 1,
-      },
-      {
-        question: 'Кто основал компанию McDonald’s?',
-        answer: 'Братья Макдональды',
-        theme_id: 2,
-      },
-      {
-        question: 'В каком году была основана компания?',
-        answer: '1940',
-        theme_id: 2,
-      },
-      {
-        question: 'Где открылся первый ресторан McDonalds?',
-        answer: 'Калифорния',
-        theme_id: 2,
-      },
-      {
-        question:
-          'Как называется комплексный заказ еды для детей в McDonald’s?',
-        answer: 'Хэппи Мил',
-        theme_id: 2,
-      },
-      {
-        question: 'Как называется российский аналог McDonald’s?',
-        answer: 'ВКУСно и тОЧКА',
-        theme_id: 2,
-      },
-      {
-        question:
-          'Вопрос для Влада(3 фаза). Как сейчас можно получить при покупке большого комбо в Вкусно и точка ?',
-        answer: 'Бокал',
-        theme_id: 2,
+        img:"/foto/Yura.png"
       },
     ]);
   },

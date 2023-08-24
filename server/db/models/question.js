@@ -18,6 +18,10 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.TEXT
     },
+    img: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
     theme_id: {
       allowNull: false,
       type: DataTypes.INTEGER,
