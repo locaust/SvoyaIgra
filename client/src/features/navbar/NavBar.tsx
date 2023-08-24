@@ -13,7 +13,7 @@ function NavBar(): JSX.Element {
             </NavLink>
           </li>
           <li>
-            <NavLink className={({ isActive }) => (isActive ? 'active_link' : '')} to="/games">
+            <NavLink className={({ isActive }) => (isActive ? 'active_link' : '')} to="/question">
               Игра
             </NavLink>
           </li>
