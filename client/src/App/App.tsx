@@ -1,13 +1,21 @@
 import React from 'react';
-import './App.css';
 
-function App() {
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+
+import './App.css';
+import NavBar from '../features/navbar/NavBar';
+
+function App(): JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
-    </div>
+
+    <BrowserRouter>
+    <Routes>
+      <Route path='/' element={<NavBar/>}>
+
+      </Route>
+    </Routes>
+    </BrowserRouter>
+
   );
 }
 
