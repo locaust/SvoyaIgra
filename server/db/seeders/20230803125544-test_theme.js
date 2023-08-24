@@ -5,7 +5,7 @@ module.exports = {
   async up (queryInterface, Sequelize) {
     await Theme.bulkCreate([
       {
-        title: 'Животные',
+        title: 'Преподаватели',
       },
       {
         title: 'МакДоналдс',

@@ -17,6 +17,10 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      img: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
       theme_id: {
         allowNull: false,
         type: Sequelize.INTEGER,

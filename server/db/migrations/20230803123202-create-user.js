@@ -13,6 +13,15 @@ module.exports = {
         allowNull: false,
         type: Sequelize.TEXT
       },
+      email: {
+        unique: true,
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
+      password: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
       scores: {
         defaultValue: 0,
         type: Sequelize.INTEGER
