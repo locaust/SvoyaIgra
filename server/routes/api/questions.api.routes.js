@@ -5,7 +5,7 @@ router
   .get('/', async (req, res) => {
     try {
       
-      const questions = await Question.findAll({ include: { model: Theme}});
+      const questions = await Question.findAll();
     
       res.json(questions);
 
