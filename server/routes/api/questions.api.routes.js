@@ -1,11 +1,16 @@
 const router = require('express').Router();
-const { Questions } = require('../../db/models');
+const { Question, Theme } = require('../../db/models');
 
 router
   .get('/', async (req, res) => {
     try {
-      const questions = await Questions.findAll();
+      
+      const questions = await Question.findAll({ include: { model: Theme}});
+    
       res.json(questions);
+
+
+      
     } catch ({ message }) {
       res.json({ message });
     }
