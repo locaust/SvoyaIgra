@@ -30,7 +30,7 @@ function NavBar(): JSX.Element {
             >
               Очки
             </NavLink>
-          </li> */}
+          </li> */} 
         </ul>
       </nav>
       <Outlet />
