@@ -10,11 +10,6 @@ export default function QuestionItem({
   const [modalActive, setModalActive] = useState(false);
   const [dis, setDis] = useState(false);
 
-  const handleDis: React.FormEventHandler<HTMLFormElement> = async (e) => {
-    e.preventDefault();
-    setDis(true);
-  };
-
   return (
     <>
       {dis ? (
