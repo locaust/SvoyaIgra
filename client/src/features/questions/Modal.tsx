@@ -14,17 +14,17 @@ export default function Modal({
   question: Question;
 }): JSX.Element {
   const [answer, setAnswer] = useState("");
-  console.log(answer);
+  const [curAnswer, setCurAnswer] = useState("");
 
-  // const handleAnswer: React.FormEventHandler<HTMLFormElement> = async (e) => {
-  //   e.preventDefault();
-  //   const answerDiv = document.querySelector(".answer");
-  //   if (answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase()) {
-  //     answerDiv?.innerHTML = "ok";
-  //   } else {
-  //     answerDiv?.innerHTML = "Neok";
-  //   }
-  // };
+  const handleAnswer: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    if (answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase()) {
+      setCurAnswer("Правильно");
+    } else {
+      setCurAnswer(`Неправильно. Правильный ответ: ${question.answer} `);
+    }
+    setAnswer("");
+  };
   console.log(answer);
 
   return (
@@ -34,7 +34,7 @@ export default function Modal({
       </div>
       <h4>{question.question}</h4>
       <img className='cards__modal__img' src={question.img} alt='question' />
-      <form>
+      <form onSubmit={handleAnswer}>
         <input
           className='cards__modal__input'
           type='text'
@@ -44,13 +44,14 @@ export default function Modal({
         <button type='submit'>Проверить ответ</button>
       </form>
 
-      {answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase() ? (
+      {/* {answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase() ? (
         <div className='answer'> верно</div>
       ) : answer === "" ? (
         <div />
       ) : (
         <div className='answer'> Неверно</div>
-      )}
+      )} */}
+      <p>{curAnswer}</p>
     </div>
   );
 }
