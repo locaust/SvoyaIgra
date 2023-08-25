@@ -14,9 +14,9 @@ function QuestionsPage():JSX.Element {
     <h1>Своя игра</h1>
     {Boolean(currentModalId) && <Modal onClick={setCurrentModalId} id={currentModalId} />}
     <div className="cards__container">
-        {questions.map((question) => (
+        {/* {questions.map((question) => (
           <QuestionItem key={question.id} question={question} onClick={setCurrentModalId} />
-        ))}
+        ))} */}
     </div>
   </>
   );

@@ -4,13 +4,14 @@ const { Question, Theme } = require('../../db/models');
 router
   .get('/', async (req, res) => {
     try {
-      
-      const questions = await Question.findAll();
-    
+
+      const questions = await Theme.findAll({include:[{model:Question, as: "Questions"}]});
+   
       res.json(questions);
       
     } catch ({ message }) {
       res.json({ message });
+   
     }
   })
 module.exports = router;
