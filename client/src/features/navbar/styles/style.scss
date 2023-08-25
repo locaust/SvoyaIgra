@@ -2,7 +2,7 @@
   &__container {
     margin: 0 auto;
     color: antiquewhite;
-    background-color: #333;
+    background-color: rgb(19, 122, 37);
     padding: 20px;
     box-shadow: 0 4px 10px rgba($color: #000000, $alpha: 0.4);
     max-width: 1000px;
@@ -28,9 +28,9 @@ a {
 }
 
 a:hover {
-  border: 2px solid rgb(52, 246, 84);
+  border: 2px solid rgb(223, 235, 57);
 }
 
 li a.active_link {
-  color: rgb(0, 42, 252);
+  color: rgb(210, 240, 79);
 }

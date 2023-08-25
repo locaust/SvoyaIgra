@@ -14,7 +14,7 @@ function QuestionsPage(): JSX.Element {
 
       <div className='cards__container'>
         {themes.map((theme) => (
-          <div>
+          <div className="cards__cards">
             {theme.title}
             {theme.Questions.map((question) => (
               <QuestionItem key={question.id} question={question} />
