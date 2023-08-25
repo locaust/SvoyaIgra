@@ -1,5 +1,5 @@
-import { Question } from './types';
+import { Theme } from './types';
 
 export type State = {
-  question: Question[];
+  theme: Theme[];
 };

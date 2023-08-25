@@ -8,4 +8,9 @@ isDone: boolean,
 theme_id:number
 };
 
+export type Theme = {
+   title: string;
+   questions: Question[];
+}
+
 export type QuestionId = Question['id'];
