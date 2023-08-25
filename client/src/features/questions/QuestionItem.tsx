@@ -8,14 +8,35 @@ export default function QuestionItem({
   question: Question;
 }): JSX.Element {
   const [modalActive, setModalActive] = useState(false);
+  const [dis, setDis] = useState(false);
+
+  const handleDis: React.FormEventHandler<HTMLFormElement> = async (e) => {
+    e.preventDefault();
+    setDis(true);
+  };
 
   return (
     <>
-      <div className='cards__card' onClick={() => setModalActive(true)}>
-        {question.price}
-        {/* <img src={question.img} alt="question" />
-    <h5>{question.question}</h5> */}
-      </div>
+      {dis ? (
+        <button
+          disabled
+          className='cards__card'
+          onClick={() => {
+            setModalActive(true), setDis(true);
+          }}
+        >
+          {question.price}
+        </button>
+      ) : (
+        <button
+          className='cards__card'
+          onClick={() => {
+            setModalActive(true), setDis(true);
+          }}
+        >
+          {question.price}
+        </button>
+      )}
 
       {modalActive && (
         <Modal
