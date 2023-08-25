@@ -1,21 +1,21 @@
-import { Action } from "../../features/questions/types/Action";
-import { State } from "../../features/questions/types/State";
+import { Action } from '../../features/questions/types/Action';
+import { State } from '../../features/questions/types/State';
 
 const initialState: State = {
-  question: [],
+  themes: [],
 };
 
-const questionsReducer =(state=initialState, action: Action): State => {
+const themesReducer = (state = initialState, action: Action): State => {
   switch (action.type) {
-    case "questions/load":
-      return{
+    case 'questions/load':
+      return {
         ...state,
-        question: action.payload,
-      }
-  
+        themes: action.payload,
+      };
+
     default:
       return state;
   }
-}
+};
 
-export default questionsReducer;
+export default themesReducer;

@@ -1,4 +1,3 @@
-import { Question } from './types';
+import { Theme } from "./types";
 
-export type Action =
-  | {type:'questions/load'; payload:Question[]};
+export type Action = { type: "questions/load"; payload: Theme[] };
