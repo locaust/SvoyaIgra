@@ -14,7 +14,6 @@ function App(): JSX.Element {
 const loadQuestions = async (): Promise<void> => {
     const data = await api.fetchQuestion();
     console.log(data);
-    
     dispatch({ type: 'questions/load', payload: data });
   };
 

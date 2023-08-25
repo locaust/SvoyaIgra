@@ -1,24 +1,28 @@
-import React, { useState } from 'react';
-import './styles/style.scss';
-import { useSelector } from 'react-redux';
-import { RootState } from '../../redux/store';
-import QuestionItem from './QuestionItem';
-import Modal from './Modal';
+import React, { useState } from "react";
+import "./styles/style.scss";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+import QuestionItem from "./QuestionItem";
 
-function QuestionsPage():JSX.Element {
-  const questions = useSelector((store: RootState) => store.questions.question);
-  const [currentModalId, setCurrentModalId] = useState(0);
+function QuestionsPage(): JSX.Element {
+  const { themes } = useSelector((store: RootState) => store.themes);
+  console.log(themes);
 
   return (
-  <>
-    <h1>Своя игра</h1>
-    {Boolean(currentModalId) && <Modal onClick={setCurrentModalId} id={currentModalId} />}
-    <div className="cards__container">
-        {/* {questions.map((question) => (
-          <QuestionItem key={question.id} question={question} onClick={setCurrentModalId} />
-        ))} */}
-    </div>
-  </>
+    <>
+      <h1>Своя игра</h1>
+
+      <div className='cards__container'>
+        {themes.map((theme) => (
+          <div>
+            {theme.title}
+            {theme.Questions.map((question) => (
+              <QuestionItem key={question.id} question={question} />
+            ))}
+          </div>
+        ))}
+      </div>
+    </>
   );
 }
 
