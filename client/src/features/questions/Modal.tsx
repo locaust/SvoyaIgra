@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-
+import "./styles/style.scss";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 import { Question, QuestionId } from "./types/types";
@@ -8,10 +8,12 @@ export default function Modal({
   active,
   setActive,
   question,
+  setScore,
 }: {
   active: boolean;
   setActive: (status: boolean) => void;
   question: Question;
+  setScore: React.Dispatch<React.SetStateAction<number>>;
 }): JSX.Element {
   const [answer, setAnswer] = useState("");
   const [curAnswer, setCurAnswer] = useState("");
@@ -20,8 +22,10 @@ export default function Modal({
     e.preventDefault();
     if (answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase()) {
       setCurAnswer("Правильно");
+      setScore((prev) => Number(prev + +question.price));
     } else {
       setCurAnswer(`Неправильно. Правильный ответ: ${question.answer} `);
+      setScore((prev) => Number(prev - question.price));
     }
     setAnswer("");
   };
@@ -41,16 +45,11 @@ export default function Modal({
           value={answer}
           onChange={(e) => setAnswer(e.target.value)}
         />
-        <button type='submit'>Проверить ответ</button>
+        <button className='glow-on-hover' type='submit'>
+          Проверить ответ
+        </button>
       </form>
 
-      {/* {answer.toLocaleLowerCase() === question.answer.toLocaleLowerCase() ? (
-        <div className='answer'> верно</div>
-      ) : answer === "" ? (
-        <div />
-      ) : (
-        <div className='answer'> Неверно</div>
-      )} */}
       <p>{curAnswer}</p>
     </div>
   );
