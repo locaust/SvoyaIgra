@@ -11,8 +11,8 @@ export default function Modal({id, onClick}:{id:QuestionId, onClick:React.Dispat
   <div className="cards__modal">
     <div className="cards__modal__cross" onClick={() => onClick(0)}>X</div>
     <h4>{question}</h4>
-    <img src={img} alt="question" />
-    <input type="text" />
+    <img className="cards__modal__img" src={img} alt="question" />
+    <input className="cards__modal__input" type="text" />
     <button type="submit">Проверить ответ</button>
 
   </div>

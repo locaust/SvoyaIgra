@@ -22,6 +22,14 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       type: DataTypes.TEXT
     },
+    price: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
+    isDone: {
+      type: DataTypes.TEXT,
+      defaultValue: false,
+    },
     theme_id: {
       allowNull: false,
       type: DataTypes.INTEGER,

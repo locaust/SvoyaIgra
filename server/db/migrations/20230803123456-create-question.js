@@ -1,4 +1,6 @@
 'use strict';
+
+
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
   async up(queryInterface, Sequelize) {
@@ -20,6 +22,14 @@ module.exports = {
       img: {
         allowNull: false,
         type: Sequelize.TEXT
+      },
+      price: {
+        allowNull: false,
+        type: Sequelize.TEXT
+      },
+      isDone: {
+        type: Sequelize.TEXT,
+        defaultValue: false,
       },
       theme_id: {
         allowNull: false,
