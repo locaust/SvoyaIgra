@@ -24,8 +24,9 @@
   }
   &__modal{
     display: block;
-    width: 400px;
-    height: 400px;
+    
+    width: 800px;
+    height: 500px;
     position: absolute;
     z-index: 2;
     background-color: white;
@@ -35,6 +36,7 @@
     top: 50%;
     transform: translate(-50%,-50%);
     padding: 15px;
+    
     &__cross{
       top: 10px;
       right: 10px;
@@ -43,6 +45,19 @@
         cursor: pointer;
       }
 
+    }
+    &__img {
+      display: flex;
+      justify-content: center;
+      width: 400px;
+    height: 400px;
+    padding: 10px;
+    
+    }
+
+    &__input{
+      justify-content: center;
+      
     }
   }
   
