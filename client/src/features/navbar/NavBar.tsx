@@ -7,14 +7,14 @@ function NavBar(): JSX.Element {
     <>
       <nav className='nav__container'>
         <ul className='nav__ul'>
-          <li>
+          {/* <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active_link" : "")}
               to='/'
             >
               Личный кабинет
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active_link" : "")}
@@ -23,14 +23,14 @@ function NavBar(): JSX.Element {
               Игра
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               className={({ isActive }) => (isActive ? "active_link" : "")}
               to='/users'
             >
               Очки
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </nav>
       <Outlet />
